@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Over</title>
+</head>
+<body>
+    <h1>Game Over</h1>
+    <form method="POST" action="{{ url_for('start_game') }}">
+        <input type="hidden" name="level_name" value="{{ request.args.get('level_name', 'Level 1') }}">
+        <button type="submit">Restart Game</button>
+    </form>
+</body>
+</html>

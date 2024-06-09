@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+    <h1>Analytics Report</h1>
+    <ul>
+    {% for record in records %}
+        <li>{{ record.player_id }} - {{ record.level_name }} - Time: {{ record.record_t }} - Score: {{ record.record_s }}</li>
+    {% endfor %}
+    </ul>
+</center>
+{% endblock %}
